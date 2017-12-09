@@ -1,0 +1,23 @@
+{
+  "name": "awacs",
+  "version": "1.0.0",
+  "description": "tracking multiple opsitions in realtime",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"Nothing to run yet, just give me couple of hours!\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangheestyle/awacs.git"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "Sanghee Kim(sangheestyle@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sangheestyle/awacs/issues"
+  },
+  "homepage": "https://github.com/sangheestyle/awacs#readme"
+}
