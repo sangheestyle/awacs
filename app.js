@@ -14,10 +14,15 @@ type Query {
   geoPositions: [GeoPosition]!
 }
 
+type Mutation {
+  addGeoPosition(latitude: Float!, longitude: Float!): GeoPosition!
+}
+
 # we need to tell the server which types represent the root query
 # and root mutation types. We call them RootQuery and RootMutation by convention.
 schema {
   query: Query
+  mutation: Mutation
 }
 `
 
@@ -34,6 +39,13 @@ const resolvers = {
     geoPositions: () => {
       return geoPositions;
     },
+  },
+  Mutation: {
+    addGeoPosition: (object, variables, context, resolveInfo) => {
+      const { latitude, longitude } = variables;
+      geoPositions.push({ latitude, longitude });
+      return { latitude, longitude };
+    }
   },
   GeoPosition: {
     latitude: (pos) => pos.latitude,
